@@ -1,0 +1,9 @@
+services:
+  ranker:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      RYDEN_RANKER_MODEL_PATH: /app/models/ranker.pkl
+    volumes:
+      - ./models:/app/models
